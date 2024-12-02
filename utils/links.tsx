@@ -31,7 +31,7 @@ export const dispatch_links: NavLink[] = [
 
 export const yard_links: NavLink[] = [
 
-    { href: '/yard', label: 'Yard' },
+    //{ href: '/yard', label: 'Yard' },
     { href: '/yard/monitor', label: 'Yard Monitor' },
 
 ];

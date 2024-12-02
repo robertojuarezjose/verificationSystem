@@ -4,9 +4,13 @@ import { yard_links } from '@/utils/links';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-
+import {redirect} from "next/navigation";
 function Sidebar() {
+
     const pathname = usePathname();
+
+
+
 
     return (
         <aside>

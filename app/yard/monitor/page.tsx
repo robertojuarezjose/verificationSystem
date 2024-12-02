@@ -11,6 +11,7 @@ import {
 import {fetchYardTraffic} from "@/utils/actions";
 import Link from "next/link";
 import {IconButton} from "@/components/form/Buttons";
+import { IoQrCode } from "react-icons/io5";
 
 async function MonitorPage() {
     const yardTraffic = await fetchYardTraffic();
@@ -38,7 +39,7 @@ async function MonitorPage() {
 
                         <TableRow key={index}>
 
-                            <TableCell ><Link href={`/receiving/qrCode${item.qrUrl}`}>Qr Code</Link></TableCell>
+                            <TableCell ><Link href={`/receiving/qrCode${item.qrUrl}`}><IoQrCode /></Link></TableCell>
                             <TableCell>{item.truckLicensePlate}</TableCell>
                             <TableCell>{item.cargoBoxNumber}</TableCell>
                             <TableCell>{item.cargoBoxLicensePlate}</TableCell>
