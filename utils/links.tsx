@@ -7,7 +7,7 @@ type NavLink = {
 
 export const links: NavLink[] = [
 
-    { href: '/', label: 'home' },
+   // { href: '/', label: 'home' },
     { href: '/receiving', label: 'receiving' },
     { href: '/dispatch', label: 'dispatch' },
     { href: '/yard', label: 'yard' },
@@ -15,7 +15,7 @@ export const links: NavLink[] = [
 
 export const receiving_links: NavLink[] = [
 
-    { href: '/receiving', label: 'receiving' },
+    //{ href: '/receiving', label: 'receiving' },
     { href: '/receiving/qrGenerator', label: 'Qr Generator' },
     { href: '/receiving/qrCode', label: 'Display Qr Code' },
 
@@ -23,9 +23,10 @@ export const receiving_links: NavLink[] = [
 
 export const dispatch_links: NavLink[] = [
 
-    { href: '/dispatch', label: 'dispatch' },
-    { href: '/dispatch/qrCodeReader', label: 'Qr Reader' },
+    //{ href: '/dispatch', label: 'dispatch' },
+
     { href: '/dispatch/qrCodeVerification', label: 'Qr verification' },
+    { href: '/dispatch/qrCodeReader', label: 'Qr Reader' },
 
 ];
 
