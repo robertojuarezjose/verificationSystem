@@ -11,7 +11,7 @@ type webcamCaptureProps = {
 
 const WebcamCapture = ({ onScan }: webcamCaptureProps) => {
     const webcamRef = useRef<Webcam>(null);
-    const [width, setWidth] = useState(window.innerWidth < 1039 ? 320: 500);
+    const [width, setWidth] = useState(window.innerWidth < 1039 ? 315: 500);
     const [height, setHeight] = useState(window.innerHeight < 1039 ? 190: 500);
 
     //let width = 500;
