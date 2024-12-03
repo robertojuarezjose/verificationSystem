@@ -20,11 +20,14 @@ function CompareQRs({qrCode1, qrCode2, qrUrl}: CompareQrsProps) {
 
     console.log(`qrCode1: ${qrCode1} \n qrCode2: ${qrCode2.toString()}`);
 
+    if(qrCode1.toString() == qrCode2.toString()){
+        compareMessage = "QR codes are the same";
+    }
 
     useEffect(() => {
 
         if (qrCode1.toString() == qrCode2.toString()) {
-            compareMessage = "QR codes are the same";
+
 
             const updateYard = async () =>{
                 const data = await deleteFromYardByQrUrl(qrUrl);

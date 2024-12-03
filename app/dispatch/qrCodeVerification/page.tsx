@@ -129,7 +129,7 @@ const QrCodeVerification  = () => {
                 </div>
                 {qrCode && startScanning && <Card className='pl-3 bg-green-500'>Qr code 1 was successfully scanned</Card>}
 
-                {qrCode2 && startScanning && <Card className='pl-3 bg-green-500 mt-5' >Qr code 2 was successfully </Card>}
+                {qrCode2 && startScanning && <Card className='pl-3 bg-green-500 mt-5' >Qr code 2 was successfully scanned</Card>}
 
             </div>
 
