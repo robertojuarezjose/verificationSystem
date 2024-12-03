@@ -25,7 +25,7 @@ async function MonitorPage() {
                 </TableCaption>
                 <TableHeader>
                     <TableRow>
-                        <TableHead>Qr ID</TableHead>
+                        <TableHead>QR</TableHead>
                         <TableHead>Truck License Plate Number</TableHead>
                         <TableHead>Cargo Box Number</TableHead>
                         <TableHead>Cargo Box License Plate</TableHead>

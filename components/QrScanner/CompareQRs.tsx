@@ -42,6 +42,7 @@ function CompareQRs({qrCode1, qrCode2, qrUrl}: CompareQrsProps) {
                     index2 = cargoBoxNumber.indexOf("&");
                     cargoBoxNumber = cargoBoxNumber.slice(index1 + 1, index2);
 
+                    sessionStorage.removeItem('qrUrl');
                     toast({ description: `Success: Truck with plates ${truckNumber} and cargo box #${cargoBoxNumber} can now be dispatched` });
                 }
             }

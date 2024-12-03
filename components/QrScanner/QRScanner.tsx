@@ -50,11 +50,6 @@ const QRScanner = ({ updateState, updateUrlState }: QRScannerProps ) => {
                         }
 
 
-
-
-
-
-
                         console.log("code: ", code);
                     }
                     else {

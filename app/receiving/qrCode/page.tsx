@@ -171,7 +171,7 @@ function QrCodePage() {
                         </QrPrint>
 
 
-                        <div className={cn("flex gap-5 mt-5")}>
+                        <div className={cn("flex flex-col sm:flex-row gap-5 mt-5")}>
                             <a
                                 download
                                 href={qrCodeData}
