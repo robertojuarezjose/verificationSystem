@@ -17,6 +17,14 @@ async function MonitorPage() {
     const yardTraffic = await fetchYardTraffic();
 
 
+    function storeCorrectDate(date: Date) {
+        const fixedDate =  new Date(
+            Date.parse(date.toUTCString())
+        )
+        return fixedDate.toLocaleDateString() + " " + fixedDate.toLocaleTimeString();
+
+    }
+
     return (
         <section>
             <Table>
@@ -43,7 +51,7 @@ async function MonitorPage() {
                             <TableCell>{item.truckLicensePlate}</TableCell>
                             <TableCell>{item.cargoBoxNumber}</TableCell>
                             <TableCell>{item.cargoBoxLicensePlate}</TableCell>
-                            <TableCell>{item.createdAt.toDateString()} {item.createdAt.toLocaleTimeString()} </TableCell>
+                            <TableCell>{storeCorrectDate(item.createdAt)} </TableCell>
                             <TableCell>
                                 <Link href={`/yard/update/${item.id}/edit`}>
                                     <IconButton actionType='edit'></IconButton>
