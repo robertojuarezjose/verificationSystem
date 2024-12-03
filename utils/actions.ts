@@ -62,12 +62,13 @@ export const deleteFromYardByQrUrl = async (qrUrl: string) => {
     try{
 
 
-        // await db.yardTraffic.deleteMany({
-        //     where: {
-        //         qrUrl: qrUrl,
-        //     },
-        // });
+        await db.yardTraffic.deleteMany({
+            where: {
+                qrUrl: qrUrl,
+            },
+        });
 
+        revalidatePath('/yard/monitor');
 
         return {message: `success`};
 
