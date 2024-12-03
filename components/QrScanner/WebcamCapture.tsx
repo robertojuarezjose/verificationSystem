@@ -1,5 +1,5 @@
-'use client'
-import React, {useEffect, useRef, useState} from "react";
+//'use client'
+import React, {useEffect, useRef} from "react";
 import Webcam from "react-webcam";
 
 
@@ -11,11 +11,11 @@ type webcamCaptureProps = {
 
 const WebcamCapture = ({ onScan }: webcamCaptureProps) => {
     const webcamRef = useRef<Webcam>(null);
-    const [width, setWidth] = useState(window.innerWidth < 1039 ? 315: 500);
-    const [height, setHeight] = useState(window.innerHeight < 1039 ? 190: 500);
+   // const [width, setWidth] = useState(window.innerWidth < 1039 ? 315: 500);
+   // const [height, setHeight] = useState(window.innerHeight < 1039 ? 190: 500);
 
-    //let width = 500;
-    //let height = 500;
+    const width = 500;
+    const height = 500;
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -41,22 +41,22 @@ const WebcamCapture = ({ onScan }: webcamCaptureProps) => {
     // }
 
 
-    useEffect(() => {
-
-        function reSizeCam(){
-            setWidth(window.innerWidth < 1039 ? 320: 500);
-            setHeight(window.innerWidth < 1039 ? 190: 500);
-
-            console.log(`width = ${width} height: ${height}`);
-
-        }
-
-        window.addEventListener("resize", reSizeCam);
-        return () => window.removeEventListener('resize', reSizeCam);
-
-
-
-    }, [width,height]);
+    // useEffect(() => {
+    //
+    //     function reSizeCam(){
+    //         setWidth(window.innerWidth < 1039 ? 320: 500);
+    //         setHeight(window.innerWidth < 1039 ? 190: 500);
+    //
+    //         console.log(`width = ${width} height: ${height}`);
+    //
+    //     }
+    //
+    //     window.addEventListener("resize", reSizeCam);
+    //     return () => window.removeEventListener('resize', reSizeCam);
+    //
+    //
+    //
+    // }, [width,height]);
 
 
     console.log(`window width: ${window.innerWidth}`);

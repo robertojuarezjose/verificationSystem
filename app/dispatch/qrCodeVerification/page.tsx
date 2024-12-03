@@ -105,13 +105,13 @@ const QrCodeVerification  = () => {
 
 //w-96 h-96
     return (
-        <section className="flex flex-col lg:flex-row w-full h-full  sm:items-center justify-between">
+        <section className="flex flex-col lg:flex-row w-full h-full  sm:items-center justify-between ">
 
-            <div className="w-80 h-80 lg:w-96 lg:h-96 flex  items-center justify-between rounded-2xl border-double border-4 border-gray-300 bg-gray-200" >
+            <div className="w-96 h-96 flex  items-center justify-between rounded-2xl border-double border-4 border-gray-300 bg-gray-200" >
 
                 {!startScanning &&<div className='flex mx-auto'><IoCamera className="text-6xl text-gray-500"/></div> }
 
-                {loading && <div className='flex mx-auto'><h2>Opening camera...</h2></div>}
+                {loading && <div className='flex mx-auto text-black'><h2>Opening camera...</h2></div>}
                 {!loading && (startScanning &&  !qrCode)&& <QRScanner updateState={updateStateQr1}  />}
 
                 {!loading && (startScanning && qrCode && !qrCode2) && <QRScanner updateState={updateStateQr2}  updateUrlState={setUrl}  />}
@@ -121,15 +121,15 @@ const QrCodeVerification  = () => {
             </div>
 
 
-            <div className=" flex h-full w-80 lg:w-96 flex-col">
+            <div className=" flex lg:h-full w-full items-center lg:items-start lg:w-96 flex-col bg">
 
-                <div className='flex mt-5 lg:mt-0 items-center' >
+                <div className='mt-5 lg:mt-0 ' >
                     <Button className="bg-orange-500 hover:bg-orange-200 mb-4" onClick={onClickScanButton}>{buttonText}</Button>
 
                 </div>
-                {qrCode && startScanning && <Card className='bg-green-500'>Qr code 1 successfully scanned</Card>}
+                {qrCode && startScanning && <Card className='bg-green-500 px-14 transition duration-1000 ease-in-out'>Qr code 1 successfully scanned</Card>}
 
-                {qrCode2 && startScanning && <Card className='bg-green-500 mt-5' >Qr code 2 successfully scanned</Card>}
+                {qrCode2 && startScanning && <Card className='bg-green-500 mt-5 px-14 transition duration-1000 ease-in-out' > Qr code 2 successfully scanned </Card>}
 
             </div>
 
