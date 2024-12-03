@@ -4,6 +4,7 @@ import QrCode from "qrcode";
 
 import {QrGeneratorSchema, validateWithZodSchema} from "@/utils/schemas";
 import db from "@/utils/db";
+import {revalidatePath} from "next/cache";
 
 
 
@@ -35,6 +36,8 @@ export const generateQr= async (prevState: any, formData: FormData):Promise<{ qr
             }
 
         })
+
+        revalidatePath('/yard/monitor');
 
         return {message: qrUrl};
 
