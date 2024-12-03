@@ -21,7 +21,7 @@ async function MonitorPage() {
         <section>
             <Table>
                 <TableCaption className='capitalize'>
-                    Total of Trucks Inside The Yard: {yardTraffic.length}
+                    Total traffic volume inside the yard: {yardTraffic.length}
                 </TableCaption>
                 <TableHeader>
                     <TableRow>
@@ -43,7 +43,7 @@ async function MonitorPage() {
                             <TableCell>{item.truckLicensePlate}</TableCell>
                             <TableCell>{item.cargoBoxNumber}</TableCell>
                             <TableCell>{item.cargoBoxLicensePlate}</TableCell>
-                            <TableCell>{item.createdAt.toDateString()}</TableCell>
+                            <TableCell>{item.createdAt.toDateString()} {item.createdAt.toLocaleTimeString()} </TableCell>
                             <TableCell>
                                 <Link href={`/yard/update/${item.id}/edit`}>
                                     <IconButton actionType='edit'></IconButton>
